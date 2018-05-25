@@ -49,7 +49,7 @@ require(['jquery', 'render', 'bscroll', 'getReq', 'storage', 'base64', 'jsonp'],
     });
     // 点击下一章
     $("#next-btn").on('click', function() {
-        if (pageNum < 3) {
+        if (pageNum < 5) {
             pageNum += 1;
             $('.page_start').html(pageNum)
             getArtical()

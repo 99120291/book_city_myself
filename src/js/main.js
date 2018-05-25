@@ -9,6 +9,7 @@ require.config({
         "text": "./libs/text",
         "base64": './libs/jquery.base64',
         'jsonp': './libs/jquery.jsonp',
+        'lazy': './libs/jquery.lazyload',
         // common
         "render": "./common/render",
         "GetSlideDirection": "./common/slider-common",
@@ -22,6 +23,7 @@ require.config({
         'book_hot': './app/book-hot',
         'Charpset': './app/charpset',
         'Article': './app/article',
+        'login': './app/login',
         // 模板
         "bookTb": "./page/tpl/book-t-b-list.html",
         "bookLr": "./page/tpl/book-l-r-list.html",
@@ -30,6 +32,9 @@ require.config({
     },
     shim: {
         "base64": {
+            deps: ['jquery']
+        },
+        "lazy": {
             deps: ['jquery']
         }
     }

@@ -12,10 +12,12 @@ var detailData3 = require("./data/42318.json");
 var detailData4 = require("./data/301342.json");
 var detailData5 = require("./data/315972.json");
 var charpset = require('./data/charpset.json');
-var artical_1 = require('./data/artical/datafir.json');
-var artical_2 = require('./data/artical/data1.json');
-var artical_3 = require('./data/artical/data2.json');
-
+var bookhot = require('./data/book_hot.json');
+var artical_fir = require('./data/artical/datafir.json');
+var artical_1 = require('./data/artical/data1.json');
+var artical_2 = require('./data/artical/data2.json');
+var artical_3 = require('./data/artical/data3.json');
+var artical_4 = require('./data/artical/data4.json');
 
 var jsonObj = {
     "/api/index": firstPage,
@@ -31,9 +33,12 @@ var jsonObj = {
     "/api/detail?fiction_id=301342": detailData4,
     "/api/detail?fiction_id=315972": detailData5,
     "/api/charpset?fiction_id=352876": charpset,
-    "/api/artical?fiction_id=352876&pageNum=1": artical_1,
-    "/api/artical?fiction_id=352876&pageNum=2": artical_2,
-    "/api/artical?fiction_id=352876&pageNum=3": artical_3
+    "/api/bookhot": bookhot,
+    "/api/artical?fiction_id=352876&pageNum=1": artical_fir,
+    "/api/artical?fiction_id=352876&pageNum=2": artical_1,
+    "/api/artical?fiction_id=352876&pageNum=3": artical_2,
+    "/api/artical?fiction_id=352876&pageNum=4": artical_3,
+    "/api/artical?fiction_id=352876&pageNum=5": artical_4
 
 }
 module.exports = function(url) {

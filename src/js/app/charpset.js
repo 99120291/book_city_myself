@@ -16,7 +16,9 @@ require(['jquery', 'render', 'renderHeader', "getReq", 'bscroll'], function($, r
     function chapset(res) {
         renderHeader({ title: "目录" });
         render(res.item.toc, $("#toc_item"), $('#Tag__2462'));
-        var Chapset = new bscroll('.content');
+        var Chapset = new bscroll('.content', {
+            click: true
+        });
         if (pageNum) {
             Chapset.scrollToElement($('.content ul li p').eq(pageNum - 1)[0]);
             $('.content ul li p').eq(pageNum - 1).addClass('active');
@@ -25,4 +27,9 @@ require(['jquery', 'render', 'renderHeader', "getReq", 'bscroll'], function($, r
             $('.content li p:last').addClass('active');
         }
     }
+    $('.fiction_toc li').on('click', 'p', function() {
+        var index = $(this).index()
+        Chapset.scrollToElement($('.content ul li p').eq(index)[0]);
+        $('.content ul li p').eq(index).addClass('active');
+    })
 })

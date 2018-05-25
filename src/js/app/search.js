@@ -1,4 +1,4 @@
-require(['jquery', 'renderHeader', 'storage', 'render'], function($, renderHeader, storage, render) {
+require(['jquery', 'renderHeader', 'storage', 'render', 'lazy'], function($, renderHeader, storage, render, lazy) {
     renderHeader({ isSearch: true });
     var searchHistory = storage.get("history") || [];
 
@@ -19,7 +19,42 @@ require(['jquery', 'renderHeader', 'storage', 'render'], function($, renderHeade
                 storage.set("history", searchHistory);
             }
         }
-    })
+    });
+    // 请求热门数据
+    var arr = [];
+    $.ajax({
+        url: "/api/bookhot",
+        dataType: "json",
+        success: function(res) {
+            res.ads.forEach(function(item) {
+                arr.push(item.ad_name)
+            })
+            var concatArr = searchHistory.concat(arr);
+            var targerArr = unique3(concatArr)
+            render(targerArr, $('#tag-tpl'), $('#type-tags'))
+        },
+        error: function(error) {
+            console.warn(error)
+        }
+    });
+
+    function unique3(target) {
+        var res = [];
+        var json = {};
+        for (var i = 0; i < target.length; i++) {
+            if (!json[target[i]]) {
+                res.push(target[i]);
+                json[target[i]] = 1;
+            }
+
+            // !json['诛仙']
+            // res.push('诛仙')
+            // json['诛仙'] = 1
+
+            // json = { '诛仙':1}
+        }
+        return res;
+    }
 
     function search(val) {
         $.ajax({
@@ -33,7 +68,12 @@ require(['jquery', 'renderHeader', 'storage', 'render'], function($, renderHeade
                     $(".search-tags").html('<p>暂无内容</p>')
                 } else {
                     $('.search-tags').html(' ');
-                    render(res.items, $("#search-b-tpl"), $(".search-tags"))
+                    render(res.items, $("#search-b-tpl"), $(".search-tags"));
+                    $("img[data-original]").lazyload({
+                        effect: "fadeIn",
+                        threshold: 200,
+                        container: $(".search-list")
+                    });
                 }
             },
             error: function(error) {
@@ -49,8 +89,9 @@ require(['jquery', 'renderHeader', 'storage', 'render'], function($, renderHeade
             $(".search-tags").hide();
             $(".search-tags").html(" ");
             var searchHistory = storage.get("history");
-            console.log(searchHistory)
-            render(searchHistory, $("#tag-tpl"), $("#type-tags"), true)
+            var concatArr = searchHistory.concat(arr);
+            var targerArr = unique3(concatArr)
+            render(targerArr, $("#tag-tpl"), $("#type-tags"), true)
         }
     });
     // 点击tags

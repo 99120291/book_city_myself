@@ -1,0 +1,35 @@
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tip {
+    width: 60%;
+    color: red;
+    font-size: pxTorem(20px);
+    margin: 40px auto 0;
+}
+
+input:nth-child(2) {
+    margin-top: pxTorem(150px);
+}
+
+input {
+    margin: pxTorem(20px) auto;
+    width: 60%;
+    border: solid 1px #ccc;
+    font-size: pxTorem(18px);
+    padding: pxTorem(10px);
+}
+
+#login_btn {
+    margin: 0 auto;
+    padding: pxTorem(10px);
+    width: 60%;
+    height: pxTorem(40px);
+    font-size: pxTorem(16px);
+    background: orange;
+}

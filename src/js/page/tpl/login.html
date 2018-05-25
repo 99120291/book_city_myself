@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/login.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="tip"></div>
+        <input type="text" placeholder="账号" class="username">
+        <input type="text" placeholder="密码" class="pwd">
+        <button id="login_btn">登录</button>
+    </div>
+</body>
+<script src="../../libs/require.js"></script>
+<script>
+    require(['../../main.js'], function() {
+        require(["login"])
+    })
+</script>
+
+</html>
