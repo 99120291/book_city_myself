@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="scss/swiper-4.1.6.min.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="icon-sign"></div>
+            <div class="switch-tab">
+                <span class="tab-item active">书城</span>
+                <span class="tab-item">书架</span>
+                <div class="line"></div>
+            </div>
+            <a href="./index.html">
+                <div class="icon-person"></div>
+            </a>
+
+        </header>
+        <main class="content">
+            <div class="swiper-container indexSwiper swiper-no-swiping">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide indexLeft">
+                        <div down="下拉刷新" up="上拉加载">
+                            <div class="block">
+                                <div class="search-link">
+                                    <a class="not-ipt" href="./search.html">请输入书名/关键字/作者</a>
+                                </div>
+                                <div class="swiper-container banner-swiper swiper-no-swiping">
+                                    <div class="swiper-wrapper banner"></div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <script type="text/x-handlebars-template" id="slide-tpl">
+                                    {{#each data}}
+                                    <div class="swiper-slide">
+                                        <a href="{{id}}">
+                                            <img src="{{ad_pic_url}}" alt="">
+                                        </a>
+                                    </div>
+                                    {{/each}}
+                                </script>
+                                <div class="index_nav">
+                                    <dl>
+                                        <dt><img src="imgs/icon-money.png" alt=""></dt>
+                                        <dd>限免</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><img src="imgs/icon-female.png" alt=""></dt>
+                                        <dd>女生</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><img src="imgs/icon-male.png" alt=""></dt>
+                                        <dd>男生</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><img src="imgs/icon-category.png" alt=""></dt>
+                                        <dd>分类</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><img src="imgs/icon-rank.png" alt=""></dt>
+                                        <dd>排行</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="block-title-line">
+                                    <h2>本周最火</h2>
+                                </div>
+                                <div class="book-t-b-list" id="hot">
+
+                                </div>
+                                <a class="channel-group__footer" href="./js/page/tpl/book-hot.html">查看更多</a>
+                            </div>
+                            <div class="block">
+                                <div class="block-title-line">
+                                    <h2>重磅推荐<i>推</i></h2>
+                                </div>
+                                <ul class="book-l-r-list" id="first-item"></ul>
+                                <ul id="not-first">
+
+                                </ul>
+                                <div class="channel-h5__footer_next" id="Tag__14">
+                                    <a class="btn-h5__next" href="javascript:" da="index.2.n.0" expose="">换一换</a>
+                                    <a class="btn-h5__more" data-href="#page=channel&amp;id=369" da="index.2.m.0" expose="">查看全部</a>
+                                </div>
+                                <script type="text/x-handlebars-template" id="commened-list-tpl">
+                                    {{#each this}} {{#if (limit @index)}}
+                                    <li>
+                                        <span>0{{addInd2 @index}}</span>
+                                        <span>{{title}}</span>
+                                        <span>{{authors}}</span>
+                                    </li>
+                                    {{/if}} {{/each}}
+                                </script>
+                            </div>
+                            <ul class="book-l-r-list" id="index_load">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide indexRight">
+                        <div class="search-link">
+                            <a class="not-ipt" href="./search.html">请输入书名/关键字/作者</a>
+                            <div class="swiper-shelf"></div>
+                        </div>
+                        <div class="search_item">
+                            <a href="#">
+                                <div>
+                                    <ul class="shelf-list">
+                                        <li class="shelf-item">
+                                            <dt>
+                                                    <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s" alt="">
+                                                    </dt>
+                                            <dd>
+                                                <h2>小泉泉</h2>
+                                                <span class="author">程泉</span>
+                                            </dd>
+                                        </li>
+                                        <li class="shelf-item">
+                                            <dt>
+                                                    <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s" alt="">
+                                                    </dt>
+                                            <dd>
+                                                <h2>小泉泉</h2>
+                                                <span class="author">程泉</span>
+                                            </dd>
+                                        </li>
+                                        <li class="shelf-item">
+                                            <dt>
+                                                    <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s" alt="">
+                                                    </dt>
+                                            <dd>
+                                                <h2>小泉泉</h2>
+                                                <span class="author">程泉</span>
+                                            </dd>
+                                        </li>
+                                        <li class="shelf-item">
+                                            <dt>
+                                                    <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s" alt="">
+                                                    </dt>
+                                            <dd>
+                                                <h2>小泉泉</h2>
+                                                <span class="author">程泉</span>
+                                            </dd>
+                                        </li>
+                                        <li class="shelf-item">
+                                            <dt>
+                                                    <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s" alt="">
+                                                    </dt>
+                                            <dd>
+                                                <h2>小泉泉</h2>
+                                                <span class="author">程泉</span>
+                                            </dd>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="js/libs/require.js"></script>
+<script>
+    require(["./js/main.js"], function() {
+        require(["index"])
+    })
+</script>
+
+</html>

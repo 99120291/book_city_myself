@@ -1,0 +1,27 @@
+.book-t-b-list {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    padding-bottom: pxTorem(10px);
+    li {
+        width: 33%;
+        margin-top: pxTorem(15px);
+        text-align: center;
+        a {
+            display: block;
+            width: pxTorem(86px);
+            margin: 0 auto;
+            .book-cover {
+                width: 100%;
+                img {
+                    width: pxTorem(86px);
+                    height: pxTorem(100px);
+                }
+            }
+            .title {
+                color: #555;
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+}

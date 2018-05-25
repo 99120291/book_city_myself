@@ -1,0 +1,19 @@
+{
+  "name": "book_city",
+  "version": "1.0.0",
+  "description": "书城",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/99120291/book_city.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/99120291/book_city/issues"
+  },
+  "homepage": "https://github.com/99120291/book_city#readme"
+}

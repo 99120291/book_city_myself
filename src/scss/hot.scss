@@ -1,0 +1,93 @@
+@import '_common.scss';
+@import './_mixin.scss';
+@import './tmp/_header.scss';
+@import './_config.scss';
+#wrap {
+    .content {
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
+
+.book-l-r-list {
+    width: 100%;
+    &>li {
+        width: 100%;
+        padding: pxTorem(15px);
+        border-bottom: 1px solid $border-color;
+        box-sizing: border-box;
+        a {
+            width: 100%;
+            display: block;
+            display: flex;
+            .book-cover {
+                width: pxTorem(86px);
+                height: pxTorem(114px);
+                overflow: hidden;
+                position: relative;
+                img {
+                    @include wh;
+                }
+                .order {
+                    background-color: $buttle-active-bg;
+                    color: $write-color;
+                    padding: pxTorem(2px) pxTorem(6px);
+                    position: absolute;
+                    top: 0;
+                    left: pxTorem(10px);
+                }
+                .book-status {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: $write-color;
+                    line-height: 2;
+                    padding-left: pxTorem(10px);
+                    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .3));
+                }
+            }
+            .book-info {
+                flex: 1;
+                margin-left: pxTorem(15px);
+                .title {
+                    font-size: pxTorem(14px);
+                    color: $black-color;
+                }
+                span {
+                    display: block;
+                    &.author {
+                        font-size: pxTorem(12px);
+                        color: $gray-color;
+                        margin-top: pxTorem(10px);
+                    }
+                    &.intro {
+                        font-size: pxTorem(12px);
+                        color: $gray-color;
+                        margin-top: pxTorem(10px);
+                        line-height: 1.5;
+                        @include line(2);
+                    }
+                }
+                .tag-list {
+                    >li {
+                        border: 1px solid $green-color;
+                        color: $green-color;
+                        border-radius: 4px;
+                        margin: pxTorem(6px) pxTorem(6px) 0 0;
+                        display: inline-block;
+                        font-size: pxTorem(14px);
+                        padding: pxTorem(2px) pxTorem(4px);
+                    }
+                }
+            }
+        }
+        .book-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid $border-color;
+            padding: pxTorem(15px);
+            box-sizing: border-box;
+        }
+    }
+}

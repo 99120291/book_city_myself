@@ -1,0 +1,15 @@
+@import '_common.scss';
+@import './_mixin.scss';
+@import './tmp/_header.scss';
+@import './_config.scss';
+.fiction-toc__item {
+    border-bottom: pxTorem(1px) solid #EEE;
+    p {
+        line-height: 3;
+        padding: 0 pxTorem(14px);
+        font-size: pxTorem(14px);
+    }
+    .active {
+        color: red;
+    }
+}

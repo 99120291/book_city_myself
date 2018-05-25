@@ -1,0 +1,12 @@
+<script type="text/x-handlebars-template" id="header-tpl">
+    <span class="icon-back"></span>{{#if isSearch}}
+    <div class="top">
+        <span class="icon-search"></span>
+        <input type="text" class="ipt" placeholder="请输入搜索关键字">
+        <span class="search">搜索</span>
+    </div>
+    {{else}}
+    <span class="icon-back"></span>
+    <span id="detail-head">{{title}}</span>
+    <a class="icon-home" href="../../../index.html"></a>{{/if}}
+</script>

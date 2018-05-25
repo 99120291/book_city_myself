@@ -1,0 +1,69 @@
+@import "common.scss";
+@import "tmp/_header.scss";
+@import "./_mixin.scss";
+@import "./_config.scss";
+.type-tags {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tag {
+    padding: pxTorem(4px) pxTorem(20px);
+    background: pink;
+    font-size: pxTorem(16px);
+    float: left;
+    border-radius: pxTorem(6px);
+    margin: pxTorem(6px);
+    &:nth-child(3n+1) {
+        background: skyblue;
+    }
+    &:nth-child(3n+2) {
+        background: orchid;
+    }
+}
+
+.Li {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    >a {
+        display: block;
+        display: flex;
+        align-items: center;
+        color: #555;
+    }
+    border-bottom: 1px solid #000;
+}
+
+.book-cover {
+    width: pxTorem(86px);
+    height: pxTorem(114px);
+    overflow: hidden;
+    position: relative;
+    padding: pxTorem(15px);
+    img {
+        @include wh;
+    }
+}
+
+.book-info {
+    flex: 1;
+    .title {
+        font-size: pxTorem(16px);
+        color: $black-color;
+        line-height: 2;
+    }
+    .summary {
+        line-height: 1.5;
+    }
+    .author {
+        font-size: pxTorem(16px);
+        line-height: 2;
+    }
+}
+
+.search-list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}

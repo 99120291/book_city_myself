@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/detail.css">
+    <script src="../../libs/flexible.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="render-header"></header>
+        <div class="top__bd" data-dom-uid="11">
+
+            <section class="main-card">
+                <div class="u-book -detail">
+
+                </div>
+            </section>
+            <section class="main-card" id="detail-center" style="margin-top:-10px">
+
+            </section>
+            <section class="main-card" id="detail-cen">
+
+            </section>
+            <section class="main-card -folder" id="detail-fource">
+
+            </section>
+            <script type="text/x-handlebars-template" id="detail-fir">
+                <div class="book-cover Lazy_loading Lazy_loaded" data-id="352876" id="Tag__86"><img src="{{cover}}">
+                    <div class="u-tagRT"></div>
+                </div>
+                <div class="info">
+                    <h3 class="title">{{title}}</h3>
+                    <p class="author"><span class="author">{{authors}}</span></p>
+                    <div class="u-grade">
+                        <div class="grade grade8"><img src="../../../imgs/average.png" alt="" style="float: left;"></div><span class="read">4885个评价</span></div>
+                    <p class="price">价格：5书币/千字</p>
+                    <p class="count">字数：566万字<span class="u-booktag -serial">连载中</span></p>
+                </div>
+            </script>
+            <script type="text/x-handlebars-template" id="detail-sec">
+                <div class="book-dash">
+                    <button class="detail-btn">开始阅读</button>
+                    <span class="download-btn">下载</span>
+                </div>
+                <div class="u-folder " id="Tag__88">
+                    <div class="box1">
+                        <div class="folder-cnt -fold">
+                            {{content}}
+                        </div>
+                    </div>
+                    <a href="../../page/tpl/charpset.html?fiction_id={{fiction_id}}" style="color:#555">
+                        <div id="new-detail">最新：{{latest}}</div>
+                    </a>
+                </div>
+                <div class="block"></div>
+            </script>
+            <script type="text/x-handlebars-template" id="detail-third">
+                <div class="folder-top">
+                    <h3>类别标签</h3>
+                </div>
+                <div class="folder-cnt">
+                    <ul class="m-tag -color">
+                        {{#each this}}
+                        <li class="u-tag">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div><em class="folder-more"></em>
+
+                <div class="block"></div>
+            </script>
+            <script type="text/x-handlebars-template" id="detail-last">
+                <div class="u-title">
+                    <h1>作者其它图书</h1>
+                </div>
+                <div class="cnt">
+                    <ul class="book-table">
+                        <li data-track="0">
+                            <div id="Tag__90"><img src="{{cover}}">
+                            </div>
+                            <div class="info">
+                                <h3 class="title">{{title}}</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block"></div>
+            </script>
+            <section class="main-card -folder">
+                <div class="u-title">
+                    <h4>图书信息</h4>
+                </div>
+                <div class="cnt">
+                    <ul class="text">
+                        <li>版权：阅文集团旗下起点中文网</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="../../libs/require.js"></script>
+<script>
+    require(["../../main.js"], function() {
+        require(["bookDetail"])
+    })
+</script>
+
+</html>

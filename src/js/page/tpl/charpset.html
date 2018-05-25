@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/charpset.css">
+    <script src="../../libs/flexible.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="render-header"></header>
+        <div class="content">
+            <ul class="">
+                <li class="fiction-toc__item" id="Tag__2462">
+
+                </li>
+            </ul>
+            <script type="text/x-handlebars-template" id="toc_item">
+                {{#each this}}
+                <p>{{title}}</p>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+</body>
+<script src="../../libs/require.js"></script>
+<script>
+    require(["../../main.js"], function() {
+        require(["Charpset"])
+    })
+</script>
+
+</html>

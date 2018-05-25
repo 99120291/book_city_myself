@@ -1,0 +1,172 @@
+@import "common.scss";
+@import "tmp/_header.scss";
+.top__bd {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .u-book {
+        display: flex;
+        align-items: center;
+        .book-cover {
+            img {
+                width: pxTorem(86px);
+                height: pxTorem(120px);
+                padding: pxTorem(20px);
+            }
+        }
+        .info {
+            h3 {
+                font-size: pxTorem(20px);
+                line-height: 2;
+            }
+            .author {
+                color: skyblue;
+                line-height: 1.5;
+                font-size: pxTorem(14px);
+            }
+            .read,
+            .price,
+            .count {
+                line-height: 1.5;
+                font-size: pxTorem(14px);
+            }
+            .u-booktag {
+                margin-left: pxTorem(5px);
+                border: seagreen 3px solid;
+                padding: pxTorem(1px);
+                border-radius: pxTorem(5px);
+            }
+        }
+    }
+    .book-dash {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include num(84%, pxTorem(60px));
+        margin: 0 auto;
+        .detail-btn {
+            text-align: center;
+            flex: 1;
+            background: orangered;
+            font-size: pxTorem(20px);
+            border: none;
+            outline: none;
+            border-radius: pxTorem(10px);
+            color: #fff;
+            padding: pxTorem(5px);
+        }
+        .download-btn {
+            margin-left: pxTorem(10px);
+            text-align: center;
+            flex: 1;
+            padding: pxTorem(5px);
+            font-size: pxTorem(20px);
+            background: #fff;
+            border-radius: pxTorem(10px);
+            border: solid 1px #ccc;
+        }
+    }
+    .u-folder {
+        width: 100%;
+        .box1 {
+            width: 90%;
+            margin: pxTorem(10px) auto;
+            .folder-cnt {
+                font-size: pxTorem(14px);
+                line-height: 1.5;
+                width: 100%;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+            }
+        }
+        #new-detail {
+            border-top: solid 1px #ccc;
+            width: 100%;
+            line-height: 3;
+            font-size: pxTorem(16px);
+            text-align: center;
+        }
+    }
+    .block {
+        width: 100%;
+        height: pxTorem(15px);
+        background: #eee;
+    }
+    .main-card {
+        width: 100%;
+        .folder-top {
+            width: 90%;
+            margin: 0 auto;
+            h3 {
+                line-height: 2;
+                font-weight: bold;
+                font-size: pxTorem(18px);
+                color: #555;
+            }
+        }
+        .-color {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            .u-tag {
+                padding: pxTorem(4px) pxTorem(20px);
+                background: pink;
+                font-size: pxTorem(16px);
+                float: left;
+                border-radius: pxTorem(6px);
+                margin: pxTorem(6px);
+                &:nth-child(3n+1) {
+                    background: skyblue;
+                }
+                &:nth-child(3n+2) {
+                    background: orchid;
+                }
+            }
+        }
+        .u-title {
+            width: 90%;
+            margin: 0 auto;
+            h1 {
+                font-size: pxTorem(18px);
+                color: #555;
+                line-height: 2;
+            }
+        }
+        .book-table {
+            margin: pxTorem(10px) auto;
+            width: 90%;
+            .info h3 {
+                font-size: pxTorem(14px);
+                width: pxTorem(96px);
+                color: #555;
+            }
+        }
+        .u-title {
+            width: 90%;
+            margin: 0 auto;
+            h4 {
+                font-size: pxTorem(18px);
+                color: #555;
+                line-height: 2;
+            }
+        }
+        .text {
+            margin-bottom: pxTorem(10px);
+            width: 90%;
+            margin: 0 auto pxTorem(10px);
+            line-height: 2;
+            font-size: pxTorem(16px);
+            color: #555;
+        }
+    }
+    #Tag__90 {
+        width: pxTorem(86px);
+        height: pxTorem(120px);
+        img {
+            width: 100%;
+        }
+    }
+}

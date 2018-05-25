@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/article.css">
+    <script src="../../libs/flexible.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top_artical dis">
+            <span class="icon-back"></span>
+            <span>返回</span>
+            <span class="icon-more"></span>
+        </div>
+        <div class="center_artical">
+            <div class="content">
+
+            </div>
+            <script type="text/x-handlebars-template" id="artical_content">
+                <h1>{{t}}</h1>
+                {{#each p}}
+                <p>{{this}}</p>
+                {{/each}}
+            </script>
+        </div>
+        <div class="bottom_artical dis">
+            <div class="bottom_artical_top">
+                <ul>
+                    <li id="prev-btn">上一章</li>
+                    <li>
+                        <span class="page_start"></span> /
+                        <span class="page_end"></span></li>
+                    <li id="next-btn">下一章</li>
+                </ul>
+                <div class="icon-font-btn dis">
+                    <p>
+                        <b>字号</b>
+                        <span class="big-btn">大</span>
+                        <span class="small-btn">小</span>
+                    </p>
+                    <ul class="color-btns">
+                        <b>背景</b>
+                        <li class="active-border" bg-color="#f7eee5"></li>
+                        <li bg-color="#e9dfc7"></li>
+                        <li bg-color="#a4a4a4"></li>
+                        <li bg-color="#cdefce"></li>
+                        <li bg-color="#283548"></li>
+                        <li bg-color="#0f1410"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_artical_bottom">
+                <dl class="icon-swicth-list">
+                    <dt></dt>
+                    <dd>目录</dd>
+                </dl>
+                <dl class="icon-font">
+                    <dt></dt>
+                    <dd>字体</dd>
+                </dl>
+                <dl class="icon-light">
+                    <dt></dt>
+                    <dd>夜间</dd>
+                </dl>
+                <dl class="icon-down">
+                    <dt></dt>
+                    <dd>下载</dd>
+                </dl>
+
+            </div>
+        </div>
+        <div class="mark dis">
+            <div class="start-end">
+                <h3>第一章</h3>
+                <p>到顶啦，上面没有章节啦~</p>
+                <span class="sure-btn">
+                    确定
+                </span>
+            </div>
+        </div>
+        <div class="mark1 dis">
+            <div class="end-start">
+                <h3>最后一章</h3>
+                <p>到头啦，上面没有章节啦~</p>
+                <span class="sure-btn">
+                    确定
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../libs/require.js"></script>
+<script>
+    require(["../../main.js"], function() {
+        require(["Article"])
+    })
+</script>
+
+</html>
